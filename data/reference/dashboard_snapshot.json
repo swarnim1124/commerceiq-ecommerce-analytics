@@ -1,0 +1,47 @@
+{
+  "_provenance": "Values transcribed by hand from the original author's BigQuery query comments (sql/exploration, original 03_business_metrics) and the four Power BI dashboard screenshots in assets/dashboard/. They were NOT re-computed in this edition because BigQuery was unreachable when it was prepared. 'exact' values are printed in full in the source; 'rounded_k' values were read from chart labels rounded to $1K.",
+  "period": {"start": "2020-11-01", "end": "2021-01-31"},
+  "exact": {
+    "unique_users": 270154,
+    "total_revenue": 360837,
+    "transactions_global_distinct": 4452,
+    "transactions_sum_of_monthly_distinct": 4463,
+    "average_order_value_global": 81.05,
+    "total_customers": 4047,
+    "funnel": [
+      {"step": "view_item", "users": 61252},
+      {"step": "add_to_cart", "users": 12545},
+      {"step": "begin_checkout", "users": 9715},
+      {"step": "purchase", "users": 4419}
+    ],
+    "customer_segments": [
+      {"segment": "One-time customers", "customers": 3580, "revenue": 272364},
+      {"segment": "Returning customers", "customers": 467, "revenue": 88473}
+    ]
+  },
+  "rounded_k": {
+    "monthly_revenue_k": {"2020-11": 143, "2020-12": 161, "2021-01": 57},
+    "top_countries_revenue_k": {
+      "United States": 160, "India": 35, "Canada": 33, "United Kingdom": 11, "Spain": 8,
+      "France": 7, "China": 7, "Japan": 6, "Germany": 5, "Turkey": 5
+    },
+    "channel_revenue_k": {
+      "Organic Search": 104, "Other": 86, "Referral": 84, "Direct": 80, "Paid Search": 9
+    },
+    "top_product_revenue_k": {"Google Zip Hoodie F/C": 14}
+  },
+  "product_observations": {
+    "zero_purchase_high_view": [
+      {"item_name": "Google F/C Long Sleeve Tee Charcoal", "viewed_users": 9640, "purchased_users": 0},
+      {"item_name": "Google Women's Striped L/S", "viewed_users": 9541, "purchased_users": 0},
+      {"item_name": "Google F/C Long Sleeve Tee Ash", "viewed_users": 8184, "purchased_users": 0},
+      {"item_name": "Google Eco Tee Black", "viewed_users": 7683, "purchased_users": 0}
+    ],
+    "high_view_low_conversion": [
+      {"item_name": "Google Navy Speckled Tee", "viewed_users": 13696, "purchased_users": 129},
+      {"item_name": "YouTube Icon Tee Grey", "viewed_users": 12696, "purchased_users": 58},
+      {"item_name": "Google Campus Bike Eco Tee Navy", "viewed_users": 11339, "purchased_users": 41},
+      {"item_name": "Google Land & Sea French Terry Sweatshirt", "viewed_users": 10201, "purchased_users": 28}
+    ]
+  }
+}

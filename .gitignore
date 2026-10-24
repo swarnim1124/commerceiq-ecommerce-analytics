@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# Secrets and local config
+.env
+*.json.key
+service-account*.json
+credentials*.json
+
+# Generated data (re-create with `ga4-analytics export`)
+data/processed/
+data/raw/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.pbix.bak
+~$*
